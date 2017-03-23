@@ -52,7 +52,10 @@
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?= __( 'Kapcsolat', 'getsmart' ); ?></h2>
-            <div class="col-xs-12 col-md-6"></div>
+            <div class="col-xs-12 col-md-6">
+                <?php $contact = get_post( 8 ); ?>
+                <?= $contact->post_content; ?>
+            </div>
             <div class="col-xs-12 col-md-6"></div>
         </div>
     </div>

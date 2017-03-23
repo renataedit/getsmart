@@ -63,8 +63,10 @@ body.admin-bar .navbar-fixed-top{
     -o-transition: all 0.3s ease;
 }
 
-.curr-lang:before{
-    width:100%;
+.lang-cont .curr-lang:before{
+    left: 0;
+    width: 100%;
+    opacity: 1;
 }
 
 #menu-main-menu{
@@ -178,7 +180,6 @@ body.admin-bar .navbar-fixed-top{
     position:relative;
     padding: 12px 0;
     font-size: 36px;
-    line-height: 28px;
     font-weight: 300 !important;
     color: #322e2b;
     text-transform: capitalize;
@@ -221,7 +222,7 @@ body.admin-bar .navbar-fixed-top{
     position: absolute;
     bottom:0;
     left:0;
-    background-color:#b5b5b5;
+    background-color:#e0e0e0;
     margin-top:20px;
 }
 
@@ -237,6 +238,10 @@ body.admin-bar .navbar-fixed-top{
 #mivel-foglalkozunk{
     padding-top:20px;
     padding-bottom:20px;
+}
+
+#mivel-foglalkozunk .textblock > h3:after{
+    background-color:#b5b5b5;
 }
 
 #mivel-foglalkozunk .section-title{
