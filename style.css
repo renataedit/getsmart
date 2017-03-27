@@ -23,6 +23,11 @@ a{
     color:#444444;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+}
+
 h1, h2, h3, h4, h5, h6{
     color:#478AB5;
     font-family: 'Open Sans', sans-serif !important;
@@ -161,6 +166,10 @@ body.admin-bar .navbar-fixed-top{
 }
 
 .textblock{
+    padding:0 5px !important;
+}
+
+.textblock .inner-textblock{
     padding:20px 70px 20px 20px !important;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -169,7 +178,7 @@ body.admin-bar .navbar-fixed-top{
     border:1px solid transparent;
 }
 
-.textblock:hover{
+.textblock .inner-textblock:hover{
     border:1px solid #e0e0e0;
     -webkit-box-shadow: 0px 4px 8px 0px #c2c2c2;
     -moz-box-shadow: 0px 4px 8px 0px #c2c2c2;
@@ -179,6 +188,7 @@ body.admin-bar .navbar-fixed-top{
 .textblock h3{
     position:relative;
     padding: 12px 0;
+    margin-top:0 !important;
     font-size: 36px;
     font-weight: 300 !important;
     color: #322e2b;
@@ -237,10 +247,10 @@ body.admin-bar .navbar-fixed-top{
 
 #mivel-foglalkozunk{
     padding-top:20px;
-    padding-bottom:20px;
+    padding-bottom:40px;
 }
 
-#mivel-foglalkozunk .textblock > h3:after{
+#mivel-foglalkozunk .inner-textblock > h3:after{
     background-color:#b5b5b5;
 }
 
@@ -248,9 +258,68 @@ body.admin-bar .navbar-fixed-top{
     color:#FFF;
 }
 
-#mivel-foglalkozunk .textblock{
+#mivel-foglalkozunk .textblock .inner-textblock{
     background-color:rgba(255, 255, 255, 0.8);
-    margin:0 5px;
     text-shadow:0px 0px 1px rgba(0, 0, 0, 0.5);
     /*color:#FFF;*/
+}
+
+#kapcsolat{
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:#395d7b;
+}
+
+#kapcsolat *{
+    color:#FFF;
+}
+
+#kapcsolat i{
+    margin-right:5px;
+}
+
+.kotelezo-elemek{
+    position:relative;
+}
+
+.kotelezo-elemek a.szechenyi{
+
+}
+
+
+/*wp caption*/
+.alignleft{float:left; margin-right:15px;margin-bottom:15px;}
+.alignright{float:right; margin-left:15px;margin-bottom:15px;}
+.aligncenter{display:block; margin:10px auto !important;}
+.wp-caption{
+	background-color: #F3F3F3;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px 3px 3px 3px;
+	padding-top: 4px;
+	text-align: center;
+	margin: 15px;
+}
+.wp-caption img{
+	margin:0;
+}
+.wp-caption p.wp-caption-text{
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/* Belső tartalmak */
+
+.article{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.grid *{
+    color:#FFF;
+}
+
+.grid figure.effect-bubba{
+    width:98%;
 }

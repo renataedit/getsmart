@@ -12,14 +12,17 @@
                 $args = array(
                     'posts_per_page' => 3,
                     'category' => 4,
-
+                    'orderby' => 'date',
+                    'order' => 'ASC'
                 );
                 $posts_array = get_posts( $args );
                 foreach( $posts_array as $post ) : setup_postdata( $post ) ?>
                     <div class="col-xs-12 col-sm-4 textblock">
-                        <?= get_the_post_thumbnail( $post->ID, 'icons' ); ?>
-                        <h3><?= $post->post_title; ?></h3>
-                        <div class="box-content"><?= $post->post_content; ?></div>
+                        <div class="inner-textblock">
+                            <?= get_the_post_thumbnail( $post->ID, 'icons' ); ?>
+                            <h3><?= $post->post_title; ?></h3>
+                            <div class="box-content"><?= $post->post_content; ?></div>
+                        </div>
                     </div>
             <?php endforeach; ?>
         </div>
@@ -40,23 +43,13 @@
                 $posts_array = get_posts( $args );
                 foreach( $posts_array as $post ) : setup_postdata( $post ) ?>
                     <div class="col-xs-12 col-sm-6 col-md-3 textblock">
-                        <?= get_the_post_thumbnail( $post->ID, 'icons' ); ?>
-                        <h3><?= $post->post_title; ?></h3>
-                        <div class="box-content"><?= my_ultimate_excerpt(10, $post); ?></div>
+                        <div class="inner-textblock">
+                            <?= get_the_post_thumbnail( $post->ID, 'icons' ); ?>
+                            <h3><?= $post->post_title; ?></h3>
+                            <div class="box-content"><?= my_ultimate_excerpt(10, $post); ?></div>
+                        </div>
                     </div>
             <?php endforeach; ?>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="kapcsolat" style="height:400px;">
-    <div class="container">
-        <div class="row">
-            <h2 class="section-title"><?= __( 'Kapcsolat', 'getsmart' ); ?></h2>
-            <div class="col-xs-12 col-md-6">
-                <?php $contact = get_post( 8 ); ?>
-                <?= $contact->post_content; ?>
-            </div>
-            <div class="col-xs-12 col-md-6"></div>
         </div>
     </div>
 </div>
