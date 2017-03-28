@@ -46,7 +46,7 @@ add_action('admin_enqueue_scripts', function () {
 
 /* Register WP Menus */
 register_nav_menus( array(
-    'primary' => __( 'Main Menu',      'getsmart' )
+    'primary' => __( 'Main Menu', 'getsmart' )
 ) );
 
 /* Custom excerpt length */
