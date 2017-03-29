@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div style="height:500px;" class="container-fluid banner-image" data-parallax="scroll" data-image-src="<?php bloginfo('template_url') ?>/images/parallax-top.jpg" data-position-y="top">
+<div style="height:500px;" class="container-fluid banner-image" data-parallax="scroll" data-image-src="<?php bloginfo('template_url') ?>/images/parallax4.jpg" data-position-y="top">
 </div>
 <div class="container-fluid" id="rolunk">
     <div class="container">

@@ -7,6 +7,11 @@
 		?>
 			<!-- Post Starts -->
 			<div class="single_post">
+				<?php
+					if(has_post_thumbnail( $post->ID )){
+						echo get_the_post_thumbnail( $post->ID, 'medium' );
+					}
+				?>
 				<h2 class="post_title inner_title"><?php echo the_title(); ?></h2>
 				<div><?php the_content(); ?></div>
 				 <div class="fix"></div>
