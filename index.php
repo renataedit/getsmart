@@ -43,8 +43,8 @@
                 foreach( $posts_array as $post ) : setup_postdata( $post ) ?>
                     <div class="col-xs-12 col-sm-6 col-md-3 textblock">
                         <div class="inner-textblock">
-                            <?= get_the_post_thumbnail( $post->ID, 'icons' ); ?>
-                            <h3><?= $post->post_title; ?></h3>
+                            <?= get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+                            <h3><a href="<?= get_post_permalink($post->ID);  ?>"><?= $post->post_title; ?></a></h3>
                             <div class="box-content"><?= my_ultimate_excerpt(10, $post); ?></div>
                         </div>
                     </div>
