@@ -47,9 +47,13 @@
 </head>
 
 <body <?php body_class($class); ?>>
+	<?php if(!is_user_logged_in()){ ?>
+		<img src="<?php bloginfo('template_url') ?>/images/getsmart_temp.jpg" alt="GetSmart" style="margin:auto;display: block;max-width: 1150px;width: 100%;" />
+	<?php die();
+} ?>
 	<header class="container">
 		<div class="row">
-			<nav class="navbar navbar-default navbar-fixed-top" role="nacigation">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			  <div class="container">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">

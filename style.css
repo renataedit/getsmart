@@ -23,6 +23,11 @@ a{
     color:#444444;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+}
+
 h1, h2, h3, h4, h5, h6{
     color:#478AB5;
     font-family: 'Open Sans', sans-serif !important;
@@ -69,12 +74,30 @@ body.admin-bar .navbar-fixed-top{
     opacity: 1;
 }
 
-#menu-main-menu{
-    line-height:50px;
-    margin-top:13px;
+/* Responsive menu */
+.navbar-collapse li{
+    position: relative;
+    list-style:none !important;
 }
 
-#menu-main-menu li a{
+.navbar-collapse li a{
+    padding: 15px 7px;
+    color: #444444 !important;
+    font-weight:600;
+}
+
+/* Full width menu */
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing){
+    line-height:50px;
+    margin-top:6px;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li{
+    position:relative;
+    list-style:none !important;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li a{
     padding: 15px 7px;
     text-transform:uppercase;
     color: #444444 !important;
@@ -86,7 +109,7 @@ body.admin-bar .navbar-fixed-top{
     -o-transition: all 0.3s ease;
 }
 
-#menu-main-menu li a:before, .lang-cont > a:before{
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li a:before, .lang-cont > a:before{
     position: absolute;
     content: "";
     left: 50%;
@@ -103,7 +126,7 @@ body.admin-bar .navbar-fixed-top{
     transition: all 0.6s ease;
 }
 
-#menu-main-menu li a:hover:before, .lang-cont > a:hover:before{
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li a:hover:before, .lang-cont > a:hover:before{
     left: 0;
     width: 100%;
     opacity: 1;
@@ -113,7 +136,7 @@ body.admin-bar .navbar-fixed-top{
     transition: all 0.6s ease;
 }
 
-#menu-main-menu li a:after, .lang-cont > a:after{
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li a:after, .lang-cont > a:after{
     position: absolute;
     content: "";
     left: 50%;
@@ -130,13 +153,60 @@ body.admin-bar .navbar-fixed-top{
     transition: all 0.3s ease;
 }
 
-#menu-main-menu li a:hover:after, .lang-cont > a:hover:after{
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li a:hover:after, .lang-cont > a:hover:after{
     left: 0;
     width: 100%;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) .sub-menu{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 0;
+    width: 180px;
+    top:100%;
+    left:0;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) .sub-menu:before{
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    content: "\e253";
+    color:#EEC008;
+    height:10px;
+    width:100%;
+    text-align:center;
+    position:relative;
+    top:-18px;
+    left:auto;
+    right:auto;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) .sub-menu li{
+    background-color: #EEC008;
+    border-bottom:1px solid #edd787;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) li:hover .sub-menu{
+    filter: alpha(opacity=100);
+    visibility: visible;
+    opacity: 1;
+    padding-bottom:20px;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear, padding-bottom 0.3s linear;
+    -moz-transition: visibility 0.5s, opacity 0.5s linear, padding-bottom 0.3s linear;
+    -o-transition: visibility 0.5s, opacity 0.5s linear, padding-bottom 0.3s linear;
+    transition: visibility 0.5s, opacity 0.5s linear, padding-bottom 0.3s linear;
+}
+
+#bs-example-navbar-collapse-1:not(.in):not(.collapsing) .sub-menu li a{
+    display: block;
+    width:100%;
+    padding:0 0 0 10px;
+    text-transform:none;
 }
 
 #content{
@@ -161,7 +231,12 @@ body.admin-bar .navbar-fixed-top{
 }
 
 .textblock{
+    padding:0 5px !important;
+}
+
+.textblock .inner-textblock{
     padding:20px 70px 20px 20px !important;
+    margin-bottom:10px;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
@@ -169,7 +244,7 @@ body.admin-bar .navbar-fixed-top{
     border:1px solid transparent;
 }
 
-.textblock:hover{
+.textblock .inner-textblock:hover{
     border:1px solid #e0e0e0;
     -webkit-box-shadow: 0px 4px 8px 0px #c2c2c2;
     -moz-box-shadow: 0px 4px 8px 0px #c2c2c2;
@@ -179,6 +254,7 @@ body.admin-bar .navbar-fixed-top{
 .textblock h3{
     position:relative;
     padding: 12px 0;
+    margin-top:0 !important;
     font-size: 36px;
     font-weight: 300 !important;
     color: #322e2b;
@@ -237,10 +313,10 @@ body.admin-bar .navbar-fixed-top{
 
 #mivel-foglalkozunk{
     padding-top:20px;
-    padding-bottom:20px;
+    padding-bottom:40px;
 }
 
-#mivel-foglalkozunk .textblock > h3:after{
+#mivel-foglalkozunk .inner-textblock > h3:after{
     background-color:#b5b5b5;
 }
 
@@ -248,9 +324,79 @@ body.admin-bar .navbar-fixed-top{
     color:#FFF;
 }
 
-#mivel-foglalkozunk .textblock{
+#mivel-foglalkozunk .textblock .inner-textblock{
     background-color:rgba(255, 255, 255, 0.8);
-    margin:0 5px;
     text-shadow:0px 0px 1px rgba(0, 0, 0, 0.5);
+    padding:20px !important;
     /*color:#FFF;*/
+}
+
+#movel-foglalkozunk .textblock img{
+    width:100%;
+}
+
+#kapcsolat{
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:#395d7b;
+}
+
+#kapcsolat *{
+    color:#FFF;
+}
+
+#kapcsolat i{
+    margin-right:5px;
+}
+
+#mapp0_layout{
+    width:100% !important;
+    margin-left:0;
+    margin-right:0;
+}
+
+.kotelezo-elemek{
+    position:relative;
+}
+
+.kotelezo-elemek a.szechenyi{
+
+}
+
+
+/*wp caption*/
+.alignleft{float:left; margin-right:15px;margin-bottom:15px;}
+.alignright{float:right; margin-left:15px;margin-bottom:15px;}
+.aligncenter{display:block; margin:10px auto !important;}
+.wp-caption{
+	background-color: #F3F3F3;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px 3px 3px 3px;
+	padding-top: 4px;
+	text-align: center;
+	margin: 15px;
+}
+.wp-caption img{
+	margin:0;
+}
+.wp-caption p.wp-caption-text{
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/* Belső tartalmak */
+
+.article{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.grid *{
+    color:#FFF;
+}
+
+.grid figure.effect-bubba{
+    width:98%;
 }
