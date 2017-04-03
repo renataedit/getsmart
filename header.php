@@ -69,7 +69,7 @@
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
-			  	<div class="lang-cont pull-right col-xs-12 col-md-6">
+			  	<div class="lang-cont pull-right col-xs-12 col-sm-6">
 					<div class="lang-inner">
 						<?php $lngs = icl_get_languages('skip_missing=N&orderby=name&order=asc');
 		  				  foreach($lngs as $lng){
@@ -83,7 +83,7 @@
 	                    <img src="<?php bloginfo('template_url') ?>/images/alap_infoblokk_NKFIA.jpg" alt="Széchenyi terv logó kisebb" style="width:200px;height:auto;" />
 	                </a>
 				</div>
-				<div class="collapse navbar-collapse col-md-6 pull-right" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse col-xs-12 col-sm-6 pull-right" id="bs-example-navbar-collapse-1">
 					<?php wp_nav_menu( array(
 						'menu' => 'Main Menu',
 						'menu_class' => 'nav navbar-nav navbar-right',

@@ -375,6 +375,10 @@ body.admin-bar .navbar-fixed-top{
 
 }
 
+.kotelezo-elemek .icon-credit{
+    font-size:12px;
+}
+
 
 /*wp caption*/
 .alignleft{float:left; margin-right:15px;margin-bottom:15px;}
