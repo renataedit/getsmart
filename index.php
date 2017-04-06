@@ -44,8 +44,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-3 textblock">
                         <div class="inner-textblock">
                             <?= get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-                            <h3><a href="<?= get_permalink($post->ID);  ?>"><?= $post->post_title; ?></a></h3>
-                            <div class="box-content"><?= my_ultimate_excerpt(30, $post); ?></div>
+                            <div class="box-content"><?= $post->post_excerpt; ?></div>
                         </div>
                     </div>
             <?php endforeach; ?>

@@ -79,7 +79,7 @@
 		  				  }
 	  				  	?>
 					</div>
-					<a href="http://getsmart.dev/viselheto-bioszenzortechnologia-alkalmazasa-a-gyogyszerkutatasban-valamint-a-kozossegi-stresszmeresben/" class="szechenyi-kicsi">
+					<a href="<?php bloginfo('url'); ?>/viselheto-bioszenzortechnologia-alkalmazasa-a-gyogyszerkutatasban-valamint-a-kozossegi-stresszmeresben/" class="szechenyi-kicsi">
 	                    <img src="<?php bloginfo('template_url') ?>/images/alap_infoblokk_NKFIA.jpg" alt="Széchenyi terv logó kisebb" style="width:200px;height:auto;" />
 	                </a>
 				</div>

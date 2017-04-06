@@ -328,10 +328,6 @@ body.admin-bar .navbar-fixed-top{
     padding-bottom:40px;
 }
 
-#mivel-foglalkozunk .inner-textblock > h3:after{
-    background-color:#b5b5b5;
-}
-
 #mivel-foglalkozunk .section-title{
     color:#FFF;
 }
@@ -343,8 +339,9 @@ body.admin-bar .navbar-fixed-top{
     /*color:#FFF;*/
 }
 
-#movel-foglalkozunk .textblock img{
+#mivel-foglalkozunk .textblock img{
     width:100%;
+    margin-bottom:10px;
 }
 
 #kapcsolat{
