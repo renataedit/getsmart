@@ -333,6 +333,7 @@ body.admin-bar .navbar-fixed-top{
 }
 
 #mivel-foglalkozunk .textblock .inner-textblock{
+    float: left;
     background-color:rgba(255, 255, 255, 0.8);
     text-shadow:0px 0px 1px rgba(0, 0, 0, 0.5);
     padding:20px !important;
@@ -342,6 +343,18 @@ body.admin-bar .navbar-fixed-top{
 #mivel-foglalkozunk .textblock img{
     width:100%;
     margin-bottom:10px;
+}
+
+.homereadmore{
+    display:block;
+    float:left;
+    background-color:#B7B7B7;
+    color:#FFF;
+    padding:10px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 #kapcsolat{
@@ -368,13 +381,13 @@ body.admin-bar .navbar-fixed-top{
     position:relative;
 }
 
-.kotelezo-elemek a.szechenyi{
-
+.kotelezo-elemek a.szechenyi img{
+    margin-top:39px;
 }
 
-.kotelezo-elemek .icon-credit{
+/*.kotelezo-elemek .icon-credit{
     font-size:12px;
-}
+}*/
 
 
 /*wp caption*/

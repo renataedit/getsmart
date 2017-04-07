@@ -40,11 +40,16 @@
 
                 );
                 $posts_array = get_posts( $args );
-                foreach( $posts_array as $post ) : setup_postdata( $post ) ?>
+                foreach( $posts_array as $post ) : setup_postdata( $post );
+                    $button_title = !empty( get_post_meta($post->ID, 'gomb_felirat', true) ) ? get_post_meta($post->ID, 'gomb_felirat', true) : __('Bővebben', 'getsmart');
+                    $button_link = !empty( get_post_meta($post->ID, 'gomb_link', true) ) ? get_post_meta($post->ID, 'gomb_link', true) : get_permalink($post->ID);
+                    $button_target = !empty( get_post_meta($post->ID, 'gomb_link', true) ) ? 'target="_blank"' : '';
+                ?>
                     <div class="col-xs-12 col-sm-6 col-md-3 textblock">
                         <div class="inner-textblock">
                             <?= get_the_post_thumbnail( $post->ID, 'medium' ); ?>
                             <div class="box-content"><?= $post->post_excerpt; ?></div>
+                            <a class="homereadmore" <?= $button_target; ?> href="<?= $button_link ?>"><?= $button_title ?></a>
                         </div>
                     </div>
             <?php endforeach; ?>
