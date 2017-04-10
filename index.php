@@ -37,6 +37,8 @@
                 $args = array(
                     'posts_per_page' => 4,
                     'category' => 3,
+                    'orderby' => 'date',
+                    'order' => 'DESC'
 
                 );
                 $posts_array = get_posts( $args );

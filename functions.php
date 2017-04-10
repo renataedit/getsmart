@@ -23,8 +23,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('jscrollpane-css', THEME_CSS . 'jquery.jscrollpane.css');
     wp_enqueue_style('bootstrap-css', THEME_CSS . 'bootstrap.min.css');
     wp_enqueue_style('bootstrap-theme-css', THEME_CSS . 'bootstrap-theme.min.css');
+    wp_enqueue_style('font-awesome', THEME_CSS . 'font-awesome.min.css');
     wp_enqueue_style('responsive', THEME_CSS . 'responsive-style.css');
-    wp_enqueue_style('effects', THEME_CSS . 'set1.css');
     // wp_enqueue_script('jscrollpane-js', THEME_JS . 'jquery.jscrollpane.min.js', array(), '1.0.0', true);
     wp_enqueue_script('bootstrap-js', THEME_JS . 'bootstrap.min.js', array(), '1.0.0', true);
     wp_enqueue_script('my-scripts', THEME_JS . 'scripts.js', array(), '1.0.0', true);
