@@ -367,8 +367,8 @@ body.admin-bar .navbar-fixed-top{
     color:#FFF;
 }
 
-#kapcsolat i{
-    margin-right:5px;
+#kapcsolat .mapp-layout *{
+    color:#000;
 }
 
 #mapp0_layout{
