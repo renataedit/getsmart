@@ -5,9 +5,10 @@
 	.navbar-header button{margin-top:18px;}
 	.navbar-collapse ul{margin:0;}
 	.navbar-collapse li a{display:block;line-height:20px;padding-top:10px;padding-bottom:10px;}
+	#content{padding-top:212px;}
 }
-@media screen and (max-width:568px){
-
+@media screen and (max-width:450px){
+	.navbar-brand > img{height:90px !important;}
 }
 @media screen and (max-width:400px){
 	.archive_post img{
@@ -23,4 +24,7 @@
 	.archive_post .archive_content{
 		text-align:justify;
 	}
+}
+@media screen and (max-width:315px){
+	.lang-cont{text-align:left;}
 }
