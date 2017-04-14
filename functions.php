@@ -34,6 +34,7 @@ add_action('wp_enqueue_scripts', function () {
 add_theme_support('post-thumbnails');
 add_post_type_support('page', 'excerpt');
 add_image_size( 'icons', 60, 60 );
+add_image_size( 'banners', 1140, 400, array( 'center', 'center' ) );
 
 //Load scripts and styles to admin
 add_action('admin_enqueue_scripts', function () {
@@ -92,3 +93,21 @@ add_filter('widget_text', function ($text) {
     }
     return $text;
 }, 99);
+
+// // Register meta box
+// function register_banner_meta_box(){
+//     add_meta_box( 'banner_image', 'Banner Image', 'uploadBanner', 'post', 'advanced' );
+// }
+//
+// add_action( 'add_meta_boxes', 'register_banner_meta_box' );
+//
+// // Meta box display callback
+// function uploadBanner($post){
+//     return '<h2>Valamivalamivalami</h2>';
+// }
+//
+// // Save meta box
+// function save_banner_meta_box( $post_id ) {
+//     // Save logic goes here. Don't forget to include nonce checks!
+// }
+// add_action( 'save_post', 'save_banner_meta_box' );
