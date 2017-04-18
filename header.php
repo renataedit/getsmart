@@ -56,7 +56,7 @@
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			  <div class="container">
 			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
+			    <div class="navbar-header col-xs-12 col-sm-4">
 			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
 			        <span class="icon-bar"></span>
@@ -69,21 +69,35 @@
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
-			  	<div class="lang-cont pull-right col-xs-12 col-sm-6">
-					<div class="lang-inner">
-						<?php $lngs = icl_get_languages('skip_missing=N&orderby=name&order=asc');
-		  				  foreach($lngs as $lng){
-		  						  echo '<a href="'.$lng["url"].'" class="lng-'.$lng["code"].(ICL_LANGUAGE_CODE==$lng["code"] ? " curr-lang" : "").'">
-		  						  '.$lng["native_name"].' <img src="'.get_template_directory_uri()."/images/lng-".$lng["code"].".png".'">
-		  						  </a>';
-		  				  }
-	  				  	?>
+			  	<div class="lang-cont pull-right col-sm-8 hidden-xs">
+						<div class="lang-inner">
+							<?php $lngs = icl_get_languages('skip_missing=N&orderby=name&order=asc');
+			  				  foreach($lngs as $lng){
+			  						  echo '<a href="'.$lng["url"].'" class="lng-'.$lng["code"].(ICL_LANGUAGE_CODE==$lng["code"] ? " curr-lang" : "").'">
+			  						  '.$lng["native_name"].' <img src="'.get_template_directory_uri()."/images/lng-".$lng["code"].".png".'">
+			  						  </a>';
+			  				  }
+		  				  	?>
+						</div>
+						<a href="<?= ICL_LANGUAGE_CODE == 'hu' ? '' : '/en' ?>/viselheto-bioszenzortechnologia-alkalmazasa-a-gyogyszerkutatasban-valamint-a-kozossegi-stresszmeresben" class="szechenyi-kicsi">
+	              <img src="<?php bloginfo('template_url') ?>/images/alap_infoblokk_NKFIA.jpg" alt="Széchenyi terv logó kisebb" style="width:200px;height:auto;" />
+	          </a>
 					</div>
-					<a href="<?= ICL_LANGUAGE_CODE == 'hu' ? '' : '/en' ?>/viselheto-bioszenzortechnologia-alkalmazasa-a-gyogyszerkutatasban-valamint-a-kozossegi-stresszmeresben" class="szechenyi-kicsi">
-	                    <img src="<?php bloginfo('template_url') ?>/images/alap_infoblokk_NKFIA.jpg" alt="Széchenyi terv logó kisebb" style="width:200px;height:auto;" />
-	                </a>
+					<div class="lang-cont pull-right col-xs-12 visible-xs-block">
+						<div class="lang-inner">
+							<?php $lngs = icl_get_languages('skip_missing=N&orderby=name&order=asc');
+									foreach($lngs as $lng){
+											echo '<a href="'.$lng["url"].'" class="lng-'.$lng["code"].(ICL_LANGUAGE_CODE==$lng["code"] ? " curr-lang" : "").'">
+											<img src="'.get_template_directory_uri()."/images/lng-".$lng["code"].".png".'">
+											</a>';
+									}
+									?>
+						</div>
+						<a href="<?= ICL_LANGUAGE_CODE == 'hu' ? '' : '/en' ?>/viselheto-bioszenzortechnologia-alkalmazasa-a-gyogyszerkutatasban-valamint-a-kozossegi-stresszmeresben" class="szechenyi-kicsi">
+								<img src="<?php bloginfo('template_url') ?>/images/alap_infoblokk_NKFIA.jpg" alt="Széchenyi terv logó kisebb" style="width:170px;height:auto;" />
+						</a>
 				</div>
-				<div class="collapse navbar-collapse col-xs-12 col-sm-6 pull-right" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse col-xs-12 col-sm-8 pull-right" id="bs-example-navbar-collapse-1">
 					<?php wp_nav_menu( array(
 						'menu' => 'Main Menu',
 						'menu_class' => 'nav navbar-nav navbar-right',

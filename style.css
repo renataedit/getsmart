@@ -37,6 +37,10 @@ body.admin-bar .navbar-fixed-top{
     top:32px;
 }
 
+.navbar-header{
+  padding:0 !important;
+}
+
 .navbar-brand{
     padding-top:0 !important;
     padding-bottom:0 !important;
@@ -49,8 +53,12 @@ body.admin-bar .navbar-fixed-top{
 
 .lang-cont{
     text-align:right;
-    padding-right:0;
+    padding:0 !important;
     margin-top:20px;
+}
+
+.lang-cont.visible-xs-block{
+  margin-top:0;
 }
 
 .lang-inner{
@@ -85,6 +93,7 @@ body.admin-bar .navbar-fixed-top{
 .szechenyi-kicsi{
     display: inline-block;
 }
+
 
 /* Responsive menu */
 .navbar-collapse li{

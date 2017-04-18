@@ -3,12 +3,12 @@
 }
 @media screen and (max-width:783px){
 	.navbar-header button{margin-top:18px;}
+	.navbar-brand > img{height:75px !important;}
 	.navbar-collapse ul{margin:0;}
 	.navbar-collapse li a{display:block;line-height:20px;padding-top:10px;padding-bottom:10px;}
-	#content{padding-top:212px;}
+	#content{padding-top:134px;}
 }
 @media screen and (max-width:450px){
-	.navbar-brand > img{height:90px !important;}
 }
 @media screen and (max-width:400px){
 	.archive_post img{
